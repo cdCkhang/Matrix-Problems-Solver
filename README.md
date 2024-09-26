@@ -37,7 +37,7 @@ The main component that solves the matrix problem is written and packaged using 
 + <a href="https://www.maplesoft.com/">Maple Software</a>: Execute the given instructions from the backend of the server.
 
 <h2 id="section5">Demo:</h2>
-[Watch the demo video](/assets/web-demo.gif)
+![Matrix Operations demonstrate](/assets/web-demo.gif)
 
 
 
