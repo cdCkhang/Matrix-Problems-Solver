@@ -1,0 +1,242 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+    <style>
+
+        #title {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #rowA {
+            margin-bottom: 5px;
+        }
+
+        #rowB {
+            margin-bottom: 5px;
+        }
+
+        #buttonconf {
+            margin-top: 10px;
+        }
+
+        .menu {
+            height: 100px;
+            overflow-y: auto;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .returnBox {
+            height: 500px;
+            overflow-y: auto;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .button-list {
+            list-style-type: none; 
+            padding: 0; 
+            margin: 15px;
+        }
+
+        .button-list li {
+               display: inline-block; 
+               margin-right: 20px; 
+        }
+
+        .button-list li:last-child {
+            margin-right: 0;
+        }
+
+        .button-list button {
+            padding: 10px 20px; 
+            background-color: #007bff;
+            color: white; 
+            border: none;
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .button-list button:hover {
+            background-color: #0056b3; /* Darker background color on hover */
+        }
+
+        .matrix-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        .matrix {            
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>   
+    
+    <div class="container mt-5 justify-content-center">
+        <h2 class="text-center" id="title">Matrix problem solving</h2>
+        <div class="container-md" id="matrix-input-field">
+            <form method="post">
+            <div class="row justify-content-center" id="matrix-input-element">
+                <div class="col-md-6 text-center">
+                    <!-- Centering Group for Matrix A -->
+                    <div><b>Matrix A</b></div>
+                    <div class="form-group" id="matrixA">
+                        <!-- Content for Matrix A group -->
+                        <p>Input dimensions and click set.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <!-- Centering Group for Matrix B -->
+                    <div><b>Matrix B</b></div>
+                    <div class="form-group" id="matrixB">
+                        <!-- Content for Matrix B group -->
+                        <p>Input dimensions and click set.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="matrix-input-dimensions">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-sm-6">
+                                <a>Enter dimensions:</a>
+                                <div class="form-group">
+                                    <input id="rowA" placeholder="Rows" class="form-control" type="number" name="RowsA" />
+                                </div>
+                                <div class="form-group">
+                                        <input id="colA" placeholder="Cols" class="form-control" type="number" name="ColsA" />
+                                </div>
+                                <button type="button" style="margin-top: 10px;" class="btn btn-success" id="confirmA"> Set </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-sm-6">
+                                <a>Enter dimensions:</a>
+                                <div class="form-group">
+                                    <input id="rowB" placeholder="Rows" class="form-control" type="number" name="RowsB" />
+                                </div>
+                                <div class="form-group">
+                                        <input id="colB" placeholder="Cols" class="form-control" type="number" name="ColsB" />
+                                </div>
+                                <button type="button" style="margin-top: 10px;" class="btn btn-success" id="confirmB"> Set </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="menu">
+                <ul class="button-list">
+                    <li><button id="addMatrix" asp-page-handler="MatrixAddition" type="submit">Addition ( A + B )</button></li>
+                        <li><button id="subMatrix" asp-page-handler="MatrixSubtraction">Subtraction ( A - B )</button></li>
+                        <li><button id="mulMatrix" asp-page-handler="MatrixMultiplication">Multiply ( A x B )</button></li>
+                    <li><button id="AT">Transpose A</button></li>
+                    <li><button id="BT">Transpose B</button></li>
+                    <li><button id="DetA">Determinant of A</button></li>
+                    <li><button id="DetB">Determinant of B</button></li>
+                </ul>
+            </div>   
+            </form>
+            <div class="returnBox">
+                @Html.Raw(ViewData["DEBAI"])
+                @Html.Raw(ViewData["KETQUA"])                     
+                @Html.Raw(ViewData["list"])                
+                @Html.Raw(ViewData["list1"])                
+            </div>
+        </div>
+    </div>    
+</body>
+<script>
+    document.getElementById('confirmA').addEventListener('click', function (){
+        let rowsA = document.getElementById("rowA").value;
+        let colsA = document.getElementById("colA").value;
+        if (rowsA < 1 || colsA < 1 || rowsA > 20 || colsA > 20) {
+            alert("Positive integers and <= 20.")
+            let seta1 = document.getElementById("rowA");
+            seta1.value = 2;
+            let seta2 = document.getElementById("colA");
+            seta2.value = 2;
+        }
+        else {
+            let matrixATable = document.createElement("table");
+            matrixATable.classList.add("table", "table-bordered");
+
+            for (let i = 0; i < rowsA; i++) {
+                let row = document.createElement("tr");
+                for (let j = 0; j < colsA; j++) {
+                    let cell = document.createElement("td");
+                    let input = document.createElement("input");
+                    input.setAttribute("type", "number");
+                    input.setAttribute("id", `a_${i}_${j}`);
+                    input.name = `a_${i}${j}`;
+                    input.setAttribute("size", "3");
+                    input.classList.add("form-control");
+                    cell.appendChild(input);
+                    row.appendChild(cell);
+                }
+                matrixATable.appendChild(row);
+            }
+            let matrixAContainer = document.getElementById("matrixA");
+            matrixAContainer.innerHTML = "";
+            matrixAContainer.appendChild(matrixATable);
+        }
+    });
+
+    document.getElementById('confirmB').addEventListener('click', function () {
+        let rowsA = document.getElementById("rowB").value;
+        let colsA = document.getElementById("colB").value;
+        if (rowsA < 1 || colsA < 1 || rowsA > 20 || colsA > 20) {
+            alert("Positive integers and <= 20.")
+            let seta1 = document.getElementById("rowB");
+            seta1.value = 2;
+            let seta2 = document.getElementById("colB");
+            seta2.value = 2;
+        }
+        else {
+            let matrixATable = document.createElement("table");
+            matrixATable.classList.add("table", "table-bordered");
+
+            for (let i = 0; i < rowsA; i++) {
+                let row = document.createElement("tr");
+                for (let j = 0; j < colsA; j++) {
+                    let cell = document.createElement("td");
+                    let input = document.createElement("input");
+                    input.setAttribute("type", "number");
+                    input.setAttribute("id", `b_${i}_${j}`);
+                    input.name = `b_${i}${j}`;
+                    input.setAttribute("size", "3");
+                    input.classList.add("form-control");
+                    cell.appendChild(input);
+                    row.appendChild(cell);
+                }
+                matrixATable.appendChild(row);
+            }
+            let matrixAContainer = document.getElementById("matrixB");
+            matrixAContainer.innerHTML = "";
+            matrixAContainer.appendChild(matrixATable);
+        }
+    });
+</script>
+</html> 

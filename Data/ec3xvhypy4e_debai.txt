@@ -1,0 +1,10 @@
+restart;
+libname := libname, "C:/Users/HuyKhang/source/repos/WebAppMatrix/KB-IE";
+with(MatrixModule);
+RawMatrixA := Array([3, 3, 2, 5]);
+RawMatrixB := Array([2, 2, 1, 6]);
+MatrixA := PartMatrixConverter(RawMatrixA, 2, 2);
+MatrixB := PartMatrixConverter(RawMatrixB, 2, 2);
+filename := "C:/Users/HuyKhang/source/repos/WebAppMatrix/Solved/ec3xvhypy4e_ketqua.html";
+Init();
+F_MatrixMultiplication(MatrixA, MatrixB, filename);

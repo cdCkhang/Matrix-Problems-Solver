@@ -1,0 +1,10 @@
+restart;
+libname := libname, "C:/Users/HuyKhang/source/repos/WebAppMatrix/KB-IE";
+with(MatrixModule);
+RawMatrixA := Array([10, 9, 8, 7]);
+RawMatrixB := Array([1, 3, 2, 4]);
+MatrixA := PartMatrixConverter(RawMatrixA, 2, 2);
+MatrixB := PartMatrixConverter(RawMatrixB, 2, 2);
+filename := "C:/Users/HuyKhang/source/repos/WebAppMatrix/Solved/ppst2ypcfi4_ketqua.html";
+Init();
+F_MatrixSubtraction(MatrixA, MatrixB, filename);
