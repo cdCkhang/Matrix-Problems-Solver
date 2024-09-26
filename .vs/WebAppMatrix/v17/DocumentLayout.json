@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Resource\\WebAppMatrix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09D76918-CED8-42B9-8C19-8E5BF108087A}|WebAppMatrix.csproj|C:\\Resource\\WebAppMatrix\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{09D76918-CED8-42B9-8C19-8E5BF108087A}|WebAppMatrix.csproj|c:\\resource\\webappmatrix\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09D76918-CED8-42B9-8C19-8E5BF108087A}|WebAppMatrix.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09D76918-CED8-42B9-8C19-8E5BF108087A}|WebAppMatrix.csproj|c:\\resource\\webappmatrix\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{09D76918-CED8-42B9-8C19-8E5BF108087A}|WebAppMatrix.csproj|C:\\Resource\\WebAppMatrix\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{09D76918-CED8-42B9-8C19-8E5BF108087A}|WebAppMatrix.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Pages\\Index.cshtml",
               "ViewState": "AQIAAGMAAAAAAAAAAAAAAIEAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-24T16:24:43.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T16:24:43.761Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
               "ToolTip": "C:\\Resource\\WebAppMatrix\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAuwCcAAAAuAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAQwFgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T06:54:57.983Z",
               "EditorCaption": ""
