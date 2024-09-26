@@ -39,6 +39,7 @@ The main component that solves the matrix problem is written and packaged using 
 <h2 id="section5">Demo:</h2>
 https://github.com/cdCkhang/Matrix-Problems-Solver/blob/main/assets/web-demo.gif
 
+You are welcoming to use or modify any part of the source code.
 
 
 
