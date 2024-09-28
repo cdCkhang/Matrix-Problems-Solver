@@ -29,12 +29,23 @@ The main component that solves the matrix problem is written and packaged using 
 <li> The result will be an HTML file in the result folder, which the server can read to display the output to the webpage.</li>
 </ol>
 
+<h2> Directories: </h2>
+<ul>
+
+<li>BatFiles:  These are the files made during the solving process. It is a collection executable instructions feed to the Windows OS in form of .bat files.</li>
+<li>Data:  User's input and function calls defined in the built module will be stored here.</li>
+<li>KB-IE:  Built module, this is the core of the problem solving abilities.</li>
+<li>Solved:  Collections of .html file to display the results to the webpage.</li>
+<li>module_raw:  Source code of the maple solving module.</li>
+
+</ul>
 
 
 <h2 id="section4"> Perequisites: </h2>
 
 + <a href="https://www.maplesoft.com/">Visual Studio (2019/2022)</a>: Code environment, Host the web application.
 + <a href="https://www.maplesoft.com/">Maple Software</a>: Execute the given instructions from the backend of the server.
++ <a> Maple Player </a>: Lighter version of the Maple Sofware. It can view and do basic edits to the original module's source code.
 
 <h2 id="section5">Demo:</h2>
 https://github.com/cdCkhang/Matrix-Problems-Solver/blob/main/assets/web-demo.gif
