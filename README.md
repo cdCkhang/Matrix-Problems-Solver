@@ -49,7 +49,9 @@ The main component that solves the matrix problem is written and packaged using 
 + <a> Maple Player </a>: Lighter version of the Maple Sofware. It can view and do basic edits to the original module's source code.
 
 <h2 id="section5">Demo:</h2>
-https://github.com/cdCkhang/Matrix-Problems-Solver/blob/main/assets/web-demo.gif
+<a href="https://github.com/cdCkhang/Matrix-Problems-Solver/blob/main/assets/web-demo.gif" target="_blank">
+    <img src="https://github.com/cdCkhang/Matrix-Problems-Solver/blob/main/assets/web-demo.gif" alt="Demo GIF" style="max-width: 100%; height: auto;">
+</a>
 
 You are welcoming to use or modify any part of the source code.
 
