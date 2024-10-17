@@ -33,11 +33,11 @@ The main component that solves the matrix problem is written and packaged using 
 <h2 id="section3b"> Directories: </h2>
 <ul>
 
-<li>BatFiles:  These are the files made during the solving process. It is a collection executable instructions feed to the Windows OS in form of .bat files.</li>
-<li>Data:  User's input and function calls defined in the built module will be stored here.</li>
-<li>KB-IE:  Built module, this is the core of the problem solving abilities.</li>
-<li>Solved:  Collections of .html file to display the results to the webpage.</li>
-<li>module_raw:  Source code of the maple solving module.</li>
+<li>/BatFiles/:  These are the files made during the solving process. It is a collection executable instructions feed to the Windows OS in form of .bat files.</li>
+<li>/Data/:  User's input and function calls defined in the built module will be stored here.</li>
+<li>/KB-IE/:  Built module, this is the core of the problem solving abilities.</li>
+<li>/Solved/:  Collections of .html file to display the results to the webpage.</li>
+<li>/module_raw/:  Pre-packaged source code of the maple solving module.</li>
 
 </ul>
 
@@ -47,6 +47,20 @@ The main component that solves the matrix problem is written and packaged using 
 + <a href="https://www.maplesoft.com/">Visual Studio (2019/2022)</a>: Code environment, Host the web application.
 + <a href="https://www.maplesoft.com/">Maple Software</a>: Execute the given instructions from the backend of the server.
 + <a> Maple Player </a>: Lighter version of the Maple Sofware. It can view and do basic edits to the original module's source code.
+
+<h2>Installment</h2>
+<ol>
+<li>Using the command below to clone the repo into your local environment.</li>
+<pre><code>gh repo clone cdCkhang/Matrix-Problems-Solver</code></pre>
+<br>
+<li>Make sure you have Maple installed on your machine to execute the packeged module. If not, donwload <a href = "https://www.maplesoft.com/products/Maple/">here</a>. All versions should wokring fine</li>
+<br>
+<li>Change the path of the executable Maple Soft at Line 143, Index.cshtml.cs .Exmample of a valid working path:</li>
+<br>
+<pre><code>sw.WriteLine("\"C:\\Program Files\\Maple 2022\\bin.X86_64_WINDOWS\\cmaple.exe\" " + inputPath + "\"");</code></pre>
+
+<li>Run the program. You should expect to see full results in about a 5- 7 seconds delay.</li>
+</ol>
 
 <h2 id="section5">Demo:</h2>
 <a href="https://github.com/cdCkhang/Matrix-Problems-Solver/blob/main/assets/web-demo.gif" target="_blank">
